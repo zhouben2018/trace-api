@@ -18,7 +18,7 @@
 	<dubbo:monitor protocol="registry" />
 	<dubbo:consumer timeout="${dubbo.timeout}" />
 	<!--具体实现该接口的 bean-->
-	<bean id="demoService" class="com.zben.cupid.trace.impl.ClueTraceServiceImpl"/>
+	<bean id="clueTraceService" class="com.zben.cupid.trace.impl.ClueTraceServiceImpl"/>
 
 
 

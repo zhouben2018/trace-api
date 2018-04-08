@@ -1,5 +1,6 @@
 package com.zben.cupid.trace.impl;
 
+import com.zben.cupid.trace.api.ClueTraceService;
 import com.zben.cupid.trace.dao.ClueTraceMysqlDao;
 import com.zben.cupid.trace.model.ClueTrace;
 import com.zben.cupid.trace.util.UUIDUtil;
@@ -24,6 +25,9 @@ public class ClueTraceServiceImplTest {
     @Autowired
     private ClueTraceMysqlDao clueTraceMysqlDao;
 
+    @Autowired
+    private ClueTraceServiceImpl clueTraceService;
+
     @Test
     public void addClueTrace() {
         ClueTrace clueTrace = ClueTrace.builder().id(UUIDUtil.getId()).userId("1")
@@ -32,6 +36,15 @@ public class ClueTraceServiceImplTest {
             clueTraceMysqlDao.saveDomain(clueTrace);
         } catch (Exception e) {
             log.error("【线索保存】错误 clueTrace={}", clueTrace);
+        }
+    }
+
+    @Test
+    public void addClueTrace2() {
+        try {
+            clueTraceService.addClueTrace("1", "2", "3", "4", "5");
+        } catch (Exception e) {
+            log.error("【线索保存】错误 clueTrace");
         }
     }
 }
