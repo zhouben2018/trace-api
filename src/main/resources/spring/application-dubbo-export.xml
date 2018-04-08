@@ -9,5 +9,4 @@
 
  	<dubbo:service interface="com.zben.cupid.trace.api.ClueTraceService" ref="clueTraceService" />
 
- 	
 </beans>

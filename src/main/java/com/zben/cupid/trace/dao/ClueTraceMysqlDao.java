@@ -4,7 +4,7 @@ import com.zben.cupid.trace.model.ClueTrace;
 
 /**
  * @Author: zben
- * @Description:
+ * @Description:1
  * @Date: 上午10:01 2018/4/8
  */
 public interface ClueTraceMysqlDao {
