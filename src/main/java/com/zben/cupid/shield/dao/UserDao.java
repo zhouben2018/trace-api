@@ -14,4 +14,18 @@ public interface UserDao {
      * @return
      */
     UserVo selectOne(String userId);
+
+    /**
+     * 根据账号获取
+     * @param account
+     * @return
+     */
+    UserVo selectByAccount(String account);
+
+    /**
+     * 根据电话获取
+     * @param phone
+     * @return
+     */
+    UserVo selectByPhone(String phone);
 }

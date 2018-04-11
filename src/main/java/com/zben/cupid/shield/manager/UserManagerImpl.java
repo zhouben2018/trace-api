@@ -19,4 +19,12 @@ public class UserManagerImpl implements UserManager {
     public UserVo get(String userId) {
         return userDao.selectOne(userId);
     }
+
+    public UserVo getByAccount(String account) {
+        return userDao.selectByAccount(account);
+    }
+
+    public UserVo getByPhone(String phone) {
+        return userDao.selectByPhone(phone);
+    }
 }

@@ -18,7 +18,42 @@ public class UserServiceImpl implements UserService {
     public UserVo get(String userId) {
         return userManager.get(userId);
     }
+
+    public UserVo getByAccountOrPhone(String account) {
+        UserVo userVo = userManager.getByAccount(account);
+        if (userVo == null) {
+            return userManager.getByPhone(account);
+        }
+        return userVo;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

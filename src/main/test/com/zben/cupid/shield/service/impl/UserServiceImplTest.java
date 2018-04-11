@@ -29,4 +29,12 @@ public class UserServiceImplTest {
         UserVo userVo = userService.get("11");
         Assert.assertNotNull(userVo);
     }
+
+
+    @Test
+    public void getByAccountOrPhone() {
+        String account = "zhouben";
+        UserVo userVo = userService.getByAccountOrPhone(account);
+        Assert.assertNotNull(userVo);
+    }
 }

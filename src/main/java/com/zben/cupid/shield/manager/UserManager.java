@@ -15,4 +15,8 @@ public interface UserManager {
      * @return
      */
     UserVo get(String userId);
+
+    UserVo getByAccount(String account);
+
+    UserVo getByPhone(String phone);
 }

@@ -35,4 +35,30 @@
         select <include refid="user_result_field"/> from security_user where id = #{id}
     </select>
 
+    <select id="selectByAccount" parameterType="string" resultMap="user">
+        select <include refid="user_result_field"/> from security_user where account = #{account}
+    </select>
+
+    <select id="selectByPhone" parameterType="string" resultMap="user">
+        select <include refid="user_result_field"/> from security_user where phone = #{phone}
+    </select>
+
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
