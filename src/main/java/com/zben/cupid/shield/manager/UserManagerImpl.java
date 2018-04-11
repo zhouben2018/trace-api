@@ -1,6 +1,7 @@
 package com.zben.cupid.shield.manager;
 
 import com.zben.cupid.shield.dao.UserDao;
+import com.zben.cupid.shield.dto.UserDto;
 import com.zben.cupid.shield.model.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,4 +28,41 @@ public class UserManagerImpl implements UserManager {
     public UserVo getByPhone(String phone) {
         return userDao.selectByPhone(phone);
     }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

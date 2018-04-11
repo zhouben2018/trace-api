@@ -1,5 +1,6 @@
 package com.zben.cupid.shield.manager;
 
+import com.zben.cupid.shield.dto.UserDto;
 import com.zben.cupid.shield.model.UserVo;
 
 /**
@@ -19,4 +20,5 @@ public interface UserManager {
     UserVo getByAccount(String account);
 
     UserVo getByPhone(String phone);
+
 }
