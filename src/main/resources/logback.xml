@@ -51,5 +51,4 @@
         <appender-ref ref="INFO"></appender-ref>
         <appender-ref ref="ERROR"></appender-ref>
     </root>
-
 </configuration>

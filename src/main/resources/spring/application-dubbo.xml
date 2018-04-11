@@ -17,9 +17,11 @@
 	<dubbo:protocol name="dubbo" port="20880" />
 	<dubbo:monitor protocol="registry" />
 	<dubbo:consumer timeout="${dubbo.timeout}" />
+
+
 	<!--具体实现该接口的 bean-->
 	<bean id="clueTraceService" class="com.zben.cupid.trace.impl.ClueTraceServiceImpl"/>
-
+	<bean id="sourceTextService" class="com.zben.cupid.clue.remote.SourceTextServiceImpl" />
 
 
 </beans>

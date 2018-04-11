@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zben.cupid.clue.dao.CategoryDao">
+	<resultMap type="com.zben.cupid.clue.model.Categorys" id="category">
+		<id property="id" column="id" />
+		<result property="code" column="code" />
+		<result property="name" column="name" />
+		<result property="parentCode" column="parent_code" />
+	</resultMap>
+
+	<select id="findByCode" parameterType="map" resultMap="category">
+		SELECT * from category
+		WHERE code = #{code}
+		<if test="parentCode != null">
+			AND parent_code = #{parentCode}
+		</if>
+	</select>
+
+</mapper>
