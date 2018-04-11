@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zben.cupid.shield.dao.UserDao">
+    <resultMap type="com.zben.cupid.shield.model.UserVo" id="user">
+        <result property="id" column="id"/>
+        <result property="account" column="account"/>
+        <result property="password" column="password"/>
+        <result property="phone" column="phone"/>
+        <result property="email" column="email"/>
+        <result property="nickname" column="nickname"/>
+        <result property="qq" column="qq"/>
+        <result property="sex" column="sex"/>
+        <result property="headImgUrl" column="headimgurl"/>
+        <result property="cheNiuToken" column="cheniu_token"/>
+        <result property="parentId" column="parent_id"/>
+        <result property="shopCode" column="shop_code"/>
+        <result property="status" 	column="status"/>
+        <result property="lastLoginIp" 	column="last_login_ip"/>
+        <result property="updatePwdTime" column="date_uppwd"/>
+        <result property="departmentId" column="department_id"/>
+        <result property="positionId" column="position_id"/>
+        <result property="dateCreate" column="date_create"/>
+        <result property="dateUpdate" column="date_update"/>
+        <result property="dateDelete" column="date_delete"/>
+        <result property="weixin" column="weixin"/>
+        <result property="resignTime" column="resign_time"/>
+        <result property="iid" column="iid"/>
+    </resultMap>
+
+    <sql id="user_result_field">
+        id,account,phone,email,nickname,qq,sex,headimgurl,shop_code,cheniu_token,parent_id,status,last_login_ip,department_id,position_id,date_create,weixin,iid
+    </sql>
+
+    <select id="selectOne" parameterType="java.lang.String" resultMap="user">
+        select <include refid="user_result_field"/> from security_user where id = #{id}
+    </select>
+
+</mapper>

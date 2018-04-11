@@ -22,6 +22,7 @@
 	<!--具体实现该接口的 bean-->
 	<bean id="clueTraceService" class="com.zben.cupid.trace.impl.ClueTraceServiceImpl"/>
 	<bean id="sourceTextService" class="com.zben.cupid.clue.remote.SourceTextServiceImpl" />
+	<bean id="userService" class="com.zben.cupid.shield.service.impl.UserServiceImpl" />
 
 
 </beans>

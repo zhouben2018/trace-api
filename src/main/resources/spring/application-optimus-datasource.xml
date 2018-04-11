@@ -61,7 +61,7 @@
 	</bean>
 
 <!-- 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.souche.cupid.dao" />
+		<property name="basePackage" value="com.souche.cupid.manager" />
 	</bean>
  -->
 
@@ -72,7 +72,7 @@
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="sqlSessionFactoryBeanName" value="mybatisSqlSessionFactory" />
-		<property name="basePackage" value="com.zben.cupid.trace.dao, com.zben.cupid.clue.dao" />
+		<property name="basePackage" value="com.zben.cupid.trace.dao, com.zben.cupid.clue.dao, com.zben.cupid.shield.dao" />
 	</bean>
 
 

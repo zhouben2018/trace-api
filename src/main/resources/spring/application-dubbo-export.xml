@@ -11,4 +11,6 @@
 
 	<dubbo:service interface="com.zben.cupid.clue.api.SourceTextService" ref="sourceTextService" />
 
+	<dubbo:service interface="com.zben.cupid.shield.api.UserService" ref="userService" />
+
 </beans>
