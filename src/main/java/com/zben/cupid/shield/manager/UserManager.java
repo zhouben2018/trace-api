@@ -1,5 +1,6 @@
 package com.zben.cupid.shield.manager;
 
+import com.zben.cupid.clue.model.CUser;
 import com.zben.cupid.shield.dto.UserDto;
 import com.zben.cupid.shield.model.UserVo;
 
@@ -21,4 +22,5 @@ public interface UserManager {
 
     UserVo getByPhone(String phone);
 
+    CUser getByCrmId(String id);
 }

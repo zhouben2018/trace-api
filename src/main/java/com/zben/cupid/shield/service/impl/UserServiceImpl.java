@@ -1,5 +1,6 @@
 package com.zben.cupid.shield.service.impl;
 
+import com.zben.cupid.clue.model.CUser;
 import com.zben.cupid.shield.api.UserService;
 import com.zben.cupid.shield.manager.UserManager;
 import com.zben.cupid.shield.model.UserVo;
@@ -26,7 +27,39 @@ public class UserServiceImpl implements UserService {
         }
         return userVo;
     }
+
+    public CUser getCrmId(String id) {
+        if (id == null) {
+            return null;
+        }
+        return userManager.getByCrmId(id);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

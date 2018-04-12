@@ -1,5 +1,6 @@
 package com.zben.cupid.shield.service.impl;
 
+import com.zben.cupid.clue.model.CUser;
 import com.zben.cupid.shield.model.UserVo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -8,6 +9,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import javax.annotation.RegEx;
 
 import static org.junit.Assert.*;
 
@@ -36,5 +39,12 @@ public class UserServiceImplTest {
         String account = "zhouben";
         UserVo userVo = userService.getByAccountOrPhone(account);
         Assert.assertNotNull(userVo);
+    }
+
+    @Test
+    public void getCrm() {
+        String crmId = "h2uSxzJIKN";
+        CUser cUser = userService.getCrmId(crmId);
+        Assert.assertNotNull(crmId);
     }
 }

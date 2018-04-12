@@ -1,5 +1,6 @@
 package com.zben.cupid.shield.manager;
 
+import com.zben.cupid.clue.model.CUser;
 import com.zben.cupid.shield.dao.UserDao;
 import com.zben.cupid.shield.dto.UserDto;
 import com.zben.cupid.shield.model.UserVo;
@@ -27,6 +28,10 @@ public class UserManagerImpl implements UserManager {
 
     public UserVo getByPhone(String phone) {
         return userDao.selectByPhone(phone);
+    }
+
+    public CUser getByCrmId(String id) {
+        return userDao.selectOneByCrmId(id);
     }
 
 

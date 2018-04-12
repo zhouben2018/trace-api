@@ -43,6 +43,33 @@
         select <include refid="user_result_field"/> from security_user where phone = #{phone}
     </select>
 
+
+    <resultMap type="com.zben.cupid.clue.model.CUser" id="cUser">
+        <result property="id" column="id"/>
+        <result property="phone" column="phone"/>
+        <result property="name" column="name"/>
+        <result property="avatar" column="avatar"/>
+        <result property="weixin" column="weixin"/>
+        <result property="iid" column="iid"/>
+        <result property="level" column="level"/>
+        <result property="source" column="source"/>
+        <result property="province" column="province"/>
+        <result property="city" column="city"/>
+        <result property="saler" column="saler"/>
+        <result property="qq" 	column="qq"/>
+        <result property="identityCard" column="identity_card"/>
+        <result property="cellphone1" column="cellphone1"/>
+        <result property="birthday" column="birthday"/>
+        <result property="username" column="username"/>
+        <result property="dateCreate" column="date_create"/>
+        <result property="dateUpdate" column="date_update"/>
+        <result property="dateDelete" column="date_delete"/>
+        <result property="sex" column="sex"/>
+    </resultMap>
+
+    <select id="selectOneByCrmId" parameterType="java.lang.String" resultMap="cUser">
+        select * from c_user where id = #{id}
+    </select>
 </mapper>
 
 

@@ -1,5 +1,6 @@
 package com.zben.cupid.shield.dao;
 
+import com.zben.cupid.clue.model.CUser;
 import com.zben.cupid.shield.model.UserVo;
 
 /**
@@ -28,4 +29,6 @@ public interface UserDao {
      * @return
      */
     UserVo selectByPhone(String phone);
+
+    CUser selectOneByCrmId(String id);
 }
