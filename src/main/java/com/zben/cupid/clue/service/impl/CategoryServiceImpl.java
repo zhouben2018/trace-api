@@ -33,6 +33,8 @@ public class CategoryServiceImpl implements CategoryService {
             log.error("【】category={}", category);
             e.printStackTrace();
         }
+
+
         return category;
     }
 }
