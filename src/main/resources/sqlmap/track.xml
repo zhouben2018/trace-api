@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>      
+<!DOCTYPE mapper      
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zben.cupid.track.dao.TrackDao">
+
+	<resultMap id="track" type="com.zben.cupid.track.model.Track">
+		<result property="userId" column="user_id" />
+	    <result property="shopCode" column="shop_code" />
+	    <result property="operatorId" column="operator_id" />
+	    <result property="dateCreate" column="date_create" />
+	    <result property="dateUpdate" column="date_update" />
+	</resultMap>
+
+	<insert id="save" parameterType="com.zben.cupid.track.model.Track">
+		insert into customer_track(
+		id,
+		user_id,
+		shop_code,
+		`type`,
+		info,
+		operator_id,
+		date_create
+		)
+		values(
+		#{id},
+		#{userId},
+		#{shopCode},
+		#{type},
+		#{info},
+		#{operatorId},
+		now()
+		)
+	</insert>
+
+
+</mapper>   

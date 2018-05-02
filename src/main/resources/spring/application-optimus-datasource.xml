@@ -72,7 +72,8 @@
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="sqlSessionFactoryBeanName" value="mybatisSqlSessionFactory" />
-		<property name="basePackage" value="com.zben.cupid.trace.dao, com.zben.cupid.clue.dao, com.zben.cupid.shield.dao" />
+		<property name="basePackage" value="com.zben.cupid.trace.dao, com.zben.cupid.clue.dao,
+		com.zben.cupid.shield.dao, com.zben.cupid.track.dao" />
 	</bean>
 
 
